@@ -25,13 +25,15 @@ def makeBoard(fen:str, orientation:str, moves:list):
     for jogada in moves:
         out = jjcli.qxlines(f'ls {path}')
         n = len(out)
-        pathpng = os.path.join(path, str(n+1)+ '.png')
+        pathpng = os.path.join(path, str(n)+ '.png')
 
         board = chess.Board(fen)
         board.push_san(jogada)
         fen = board.fen()
 
             
+        auxpath = os.path.join("puzzles",'_.png')
+
         pgnmaker = f"""
 var ChessImageGenerator = require('chess-image-generator');
 
@@ -45,13 +47,16 @@ var imageGenerator = new ChessImageGenerator({{
 imageGenerator.loadFEN("{fen}");
 imageGenerator.generatePNG("{path}/{n}.png");
 """
+
         with open('pngmaker.js','w') as png:
             png.write(pgnmaker)
 
         os.system(f'node pngmaker.js')
-        os.system(f'convert -append assets/banner.png {pathpng} assets/banner.png {pathpng}')
 
+        os.system(f'mv {pathpng} {auxpath}')
+        
+        os.system(f'convert -append assets/banner.png {auxpath} assets/banner.png {pathpng}')
 
-
-
+ 
+    os.system(f'rm {auxpath}')
 makeBoard(fen,'true',moves.split())
