@@ -2,8 +2,10 @@
 instagram chess puzzle generater for my chess club
 
 ```mermaid
-graph TB;
-  id1(Lichess Puzzles Open Database) -- parsing -- id1(fen & moves)
+flowchart TD
+    A(Lichess Puzzles Open Database) -->|parsing | B(fen & moves)
+    B -->|chess-image-generator| C(group of images)
+    C -->|ImageMagick| D[Final 4:3 Instagram Pictures]
 ```
 
 ## Dependecies
