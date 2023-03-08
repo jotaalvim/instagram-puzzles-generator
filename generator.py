@@ -30,6 +30,7 @@ def makeBoard(fen:str, orientation:str, moves:list):
         board = chess.Board(fen)
         board.push_san(jogada)
         fen = board.fen()
+
             
         pgnmaker = f"""
 var ChessImageGenerator = require('chess-image-generator');
@@ -48,6 +49,9 @@ imageGenerator.generatePNG("{path}/{n}.png");
             png.write(pgnmaker)
 
         os.system(f'node pngmaker.js')
+        os.system(f'convert -append assets/banner.png {pathpng} assets/banner.png {pathpng}')
+
+
 
 
 makeBoard(fen,'true',moves.split())

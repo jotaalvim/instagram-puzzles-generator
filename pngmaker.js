@@ -9,4 +9,4 @@ var imageGenerator = new ChessImageGenerator({
     flipped: true
 });
 imageGenerator.loadFEN("r6k/pp2R2p/5p2/3p4/8/3P2b1/P1P3PP/2Q4K b - - 0 27");
-imageGenerator.generatePNG("puzzles/0/5.png");
+imageGenerator.generatePNG("puzzles/0/10.png");

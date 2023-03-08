@@ -1,5 +1,5 @@
 # instagram-puzzles-generator
-instagram chess puzzle generater for my chess club
+instagram chess puzzle generater for my chess club's instagram
 
 ```mermaid
 flowchart TD
@@ -9,6 +9,7 @@ flowchart TD
 ```
 
 ## Dependecies
-jjcli
-chess 
-https://github.com/andyruwruw/chess-image-generator
+* jjcli
+* chess 
+* https://github.com/andyruwruw/chess-image-generator
+* ImageMagick
