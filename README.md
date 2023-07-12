@@ -1,12 +1,20 @@
 # instagram-puzzles-generator
-instagram chess puzzle generater for my chess club's instagram
+I made this project in order to automate a puzzles collection to publish and advertisement chess
+in my Universities chess club instagram.
 
+Project flow
 ```mermaid
 flowchart TD
-    A(Lichess Puzzles Open Database) -->|parsing | B(fen & moves)
-    B -->|chess-image-generator| C(group of images)
-    C -->|ImageMagick| D[Final 4:3 Instagram Pictures]
+    A(Lichess Puzzles Open Database) -->| parsing | B(fen & moves)
+    B -->| filtering by Difficulty level | C(filtered fen & moves)
+    C -->|chess-image-generator| D(cluster of images)
+    D -->|ImageMagick| E[Instagram Pictures]
 ```
+
+Generated content:
+
+
+
 
 ## Dependecies
 * jjcli
