@@ -1,6 +1,5 @@
 # instagram-puzzles-generator
-I made this project in order to automate a puzzles collection to publish and advertisement chess
-in my Universities chess club instagram.
+I made this project in order to automate a puzzle collection to publish and advertise chess on my University chess club's Instagram.am.
 
 Project flow
 ```mermaid
