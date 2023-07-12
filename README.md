@@ -12,6 +12,8 @@ flowchart TD
 
 Generated content:
 
+![](puzzles/Screenshot_20230712_174450.png)
+![](puzzles/Screenshot_20230712_175239.png)
 
 
 
